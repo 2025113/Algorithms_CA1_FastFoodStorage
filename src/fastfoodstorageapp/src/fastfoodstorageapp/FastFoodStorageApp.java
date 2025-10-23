@@ -110,6 +110,7 @@ public class FastFoodStorageApp {
         LocalDate today = LocalDate.now();
         LocalDate maxDate = today.plusWeeks(2);
         
+        // Food items are limited to 14 days for keep in storage, this is the last rule of our business
         System.out.print("Enter best-before date (YYYY-MM-DD, Max: " + maxDate + "): ");
         String dateString = scanner.nextLine();
         
