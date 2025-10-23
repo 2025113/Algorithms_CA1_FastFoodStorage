@@ -89,6 +89,7 @@ public class FastFoodStorageApp {
         // 2. Validate weight, must be a positive number ( >0 )
         isValid = false;
         do {
+            // In this part, we have to check the weight and that must be greater than zero, it will be better for inventory tracking
             System.out.print("Enter weight (grams, must be positive): ");
             try {
                 weight = scanner.nextInt();
