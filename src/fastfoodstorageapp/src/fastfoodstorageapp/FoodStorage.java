@@ -58,8 +58,8 @@ public class FoodStorage implements StorageOperation {
     public FoodItem peekTop() {
         // We need to check if the storage is empty before peek 
         if (isEmpty()) {
-            // We changed the error message, for better consistency in error reporting
-            System.out.println("ERROR: The food storage is empty. Cannot peek.");
+            // We changed the error message, using system.err for better consistency in error reporting
+            System.err.println("ERROR: The food storage is empty. Cannot peek.");
             return null;
         }
         
@@ -73,6 +73,7 @@ public class FoodStorage implements StorageOperation {
     }
     
     // Show all items 
+    // Here it is important to show the Time Complexity Analysis, in this case O(n), thats means must iterate through every element
     @Override
     public void displayAll() {
         if (isEmpty()) {
