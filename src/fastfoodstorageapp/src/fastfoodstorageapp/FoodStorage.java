@@ -56,12 +56,15 @@ public class FoodStorage implements StorageOperation {
     // Check the first item (Peek) 
     @Override
     public FoodItem peekTop() {
+        // We need to check if the storage is empty before peek 
         if (isEmpty()) {
-            System.out.println("INFO: Storage is currently empty.");
+            // We changed the error message, for better consistency in error reporting
+            System.out.println("ERROR: The food storage is empty. Cannot peek.");
             return null;
         }
         
         FoodItem topItem = storage.peek();
+        // Displaying the item that is about to be removed 
         System.out.println("\n--- Item on Front (Next to be removed - Oldest Item) ---");
         System.out.println(topItem);
         System.out.println("---------------------------------------------------------");
