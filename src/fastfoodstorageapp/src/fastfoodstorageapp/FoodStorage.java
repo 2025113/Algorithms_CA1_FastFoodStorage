@@ -44,12 +44,15 @@ public class FoodStorage implements StorageOperation {
     }
 
     // Remove item (Dequeue) 
+    // This block will check the Time Complexity, O(1) Constant Time guaranteed by the Queue implementation
     @Override
     public FoodItem removeItem() {
         if (isEmpty()) {
+            // Prevent removing from an empty queue, so, if the user try to remove any item from empty storage, system will display this message
             System.err.println("ERROR: Storage is empty. No food item to remove.");
             return null;
         }
+        // Poll() retrieves and removes the head of this queue, this is the FIFO concept 
         return storage.poll(); 
     }
 
