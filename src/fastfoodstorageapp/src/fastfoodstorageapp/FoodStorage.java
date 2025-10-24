@@ -31,13 +31,16 @@ public class FoodStorage implements StorageOperation {
         return storage.isEmpty();
     }
 
-    // Add a item Enqueue), complexity O(1)
+    // Add a item (Enqueue), complexity O(1)
+    // Our time complexity O(1) guaranteed by the Queue implementation
     @Override
     public boolean addItem(FoodItem item) {
         if (isFull()) {
+            // Here, we have a capacity check, this is crucial for fixed-size storage, in our case only 8 items 
             System.err.println("ERROR: Storage is full. Cannot add " + item.getName());
             return false;
         }
+        // This part, the offer() will adds the item to the tail of the Queue, this is the confirmation of our FIFO method
         storage.offer(item); 
         System.out.println("SUCCESS: Added " + item.getName());
         return true;
