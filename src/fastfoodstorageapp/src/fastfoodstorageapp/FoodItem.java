@@ -8,6 +8,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+// This Class represents the core data object, demonstrating Encapsulation as we show in our banner
+// All properties are private and accessed only through public
+// Ensuring data integrity and control over modification
 public class FoodItem {
     private String name;
     private int weightGrams;
