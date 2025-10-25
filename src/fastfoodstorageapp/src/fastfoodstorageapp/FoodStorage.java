@@ -7,6 +7,8 @@ package fastfoodstorageapp;
 import java.util.LinkedList;
 import java.util.Queue;
 
+// This class implements the StorageOperation interface satisfying the OOP requirement
+// This file contains the core algorithmic logic and houses the Queue data structure
 public class FoodStorage implements StorageOperation {
     
     private final int MAX_CAPACITY = 8;
